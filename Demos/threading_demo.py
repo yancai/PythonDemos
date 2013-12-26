@@ -38,7 +38,7 @@ def main():
     for i in range(times_):
         threads[i].join()
 
-    raw_input("all done")
+    raw_input("all done...")
 
 if __name__ == "__main__":
     main()
