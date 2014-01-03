@@ -7,7 +7,7 @@
 按照如下格式打包：
 [BASE_FOLDER]/[host]/[database]/[年月日]/[sql压缩包+日志]
 例如：
-/data/back_mysql/
+/data/backup_mysql/
 └── 127.0.0.1
     ├── test
     │   └── 20140103
@@ -29,7 +29,7 @@ from datetime import datetime
 
 
 # 备份根路径
-BASE_FOLDER = r"/data/back_mysql"
+BASE_FOLDER = r"/data/backup_mysql"
 
 # 备份结果是否使用zip打包压缩
 USR_ZIP = True
