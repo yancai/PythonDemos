@@ -2,7 +2,27 @@
 # -*- coding:utf-8 -*-
 # Filename: 'back_mysql.py'
 
-"""Documentation"""
+"""MySQL备份脚本
+
+按照如下格式打包：
+[BASE_FOLDER]/[host]/[database]/[年月日]/[sql压缩包+日志]
+例如：
+/data/back_mysql/
+└── 127.0.0.1
+    ├── test
+    │   └── 20140103
+    │       ├── 20140103151001.log
+    │       └── 20140103151001.zip
+    └── mysql
+        └── 20140103
+            ├── 20140103151001.log
+            └── 20140103151001.zip
+
+
+配合linux的[crontab] 或 windows的[计划任务]使用
+
+"""
+
 import os
 import subprocess
 from datetime import datetime
