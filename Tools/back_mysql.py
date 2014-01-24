@@ -38,12 +38,14 @@ USR_ZIP = True
 MYSQL_SOURCES = (
     {
         "host": "127.0.0.1",
+        "port": 3306,
         "database": "mysql",
         "user": "root",
         "password": "123456"
     },
     {
         "host": "127.0.0.1",
+        "port": 3306,
         "database": "test",
         "user": "root",
         "password": "12345"
@@ -51,7 +53,7 @@ MYSQL_SOURCES = (
 
 )
 
-_CMD_BACKUP = "mysqldump -h {host} {database} -u {user} -p{password} --single-transaction > "
+_CMD_BACKUP = "mysqldump -h {host} -P {port} {database} -u {user} -p{password} --single-transaction > "
 _CMD_TAR = "zip -jmq {destination} {source}"
 
 _START_TIME = datetime.now()
