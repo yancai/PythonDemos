@@ -53,7 +53,7 @@ MYSQL_SOURCES = (
 
 )
 
-_CMD_BACKUP = "mysqldump -h {host} -P {port} {database} -u {user} -p{password} --single-transaction > "
+_CMD_BACKUP = "mysqldump -h {host} -P {port} {database} -u {user} -p{password} -R --single-transaction > "
 _CMD_TAR = "zip -jmq {destination} {source}"
 
 _START_TIME = datetime.now()
